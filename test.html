@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Testing the jquery-r800-keys plugin.</title>
+        <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+        <script src="jquery-r800-keys.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <label for="log">Log:</label>
+        </div>
+        <textarea name="log" id="log" rows="25" readonly></textarea>
+        <script>
+            jQuery(function ($) {
+                "use strict";
+
+                var $log = $('#log'),
+                    log = function (message) {
+                        $log.append(message + '\n').scrollTop($log[0].scrollHeight - $log.height());
+                    };
+
+                $(document).r800Keys({
+                    prev: function () { log('prev'); },
+                    next: function () { log('next'); },
+                    run: function () { log('run'); },
+                    blank: function () { log('blank'); }
+                });
+            });
+        </script>
+    </body>
+</html>
