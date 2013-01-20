@@ -1,0 +1,20 @@
+{
+    "name": "r800Keys",
+    "version": "1.0.0",
+    "title": "R800 Keys",
+    "author": {
+        "name": "Roland Hummel",
+        "email": "defaude@gmail.com"
+    },
+    "licenses": [
+        {
+            "type": "WTFPL",
+            "url": "http://www.wtfpl.net/"
+        }
+    ],
+    "dependencies": {
+        "jquery": ">=1.7"
+    },
+    "description": "A simple plugin that allows you to register callbacks for each of the four action keys on the Logitech R800 presenter.",
+    "keywords": ["Logitech", "R800", "keys"]
+}
