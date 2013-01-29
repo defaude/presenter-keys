@@ -1,3 +1,4 @@
+/*! jquery-r800-keys 1.0.1 by Roland Hummel (defaude@gmail.com) | License: https://raw.github.com/defaude/jquery-r800-keys/master/LICENSE.txt */
 jQuery(function ($) {
     "use strict";
 
