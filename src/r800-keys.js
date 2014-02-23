@@ -1,5 +1,12 @@
-/*! jquery-r800-keys 1.0.2 by Roland Hummel (defaude@gmail.com) | License: https://raw.github.com/defaude/jquery-r800-keys/master/LICENSE.txt */
-jQuery(function ($) {
+/*
+ * jquery-r800-keys
+ * 
+ *
+ * Copyright (c) 2014 Roland Hummel
+ * Licensed under the WTFPL license.
+ */
+
+(function ($) {
     "use strict";
 
     $.fn.r800Keys = function (options) {
@@ -30,4 +37,4 @@ jQuery(function ($) {
 
         return $this;
     };
-});
+}(jQuery));
