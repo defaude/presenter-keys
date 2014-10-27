@@ -20,11 +20,11 @@
             }, options),
 
             keys = {
-                33: settings.prev,
-                34: settings.next,
-                116: settings.run,
-                27: settings.run,
-                190: settings.blank
+                33: settings.prev, // page up
+                34: settings.next, // page down
+                116: settings.run, // f5
+                27: settings.run, // escape
+                190: settings.blank // . (period)
             };
 
         $this.on('keydown', function (event) {
