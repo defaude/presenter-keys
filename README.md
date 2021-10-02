@@ -1,7 +1,7 @@
 # presenter-keys
 
 Tiny no-dependency library that allows you to easily bind actions to the keys of presenters like e.g. the
-[Logitech R800 Presenter](http://www.logitech.com/en-ch/support/professional-presenter-r800).
+[Logitech R800 Presenter](https://www.logitech.com/en-us/products/presenters/r800-professional-presenter.910-001350.html).
 
 Those kinds of presenters are basically keyboards that will send the following key codes:
 
