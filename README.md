@@ -1,38 +1,49 @@
-# Logitech R800 Presenter keys made easy
+# presenter-keys
 
-A super-simple jQuery plugin that provides callbacks for all four action keys on the sweet [Logitech R800 Presenter](http://www.logitech.com/en-ch/support/professional-presenter-r800).
+Tiny no-dependency library that allows you to easily bind actions to the keys of presenters like e.g. the
+[Logitech R800 Presenter](http://www.logitech.com/en-ch/support/professional-presenter-r800).
 
-Basically, the presenter is a USB keyboard that will send the following key codes:
+Those kinds of presenters are basically keyboards that will send the following key codes:
+
 * Previous => PageUp (33)
 * Next => PageDown (34)
 * Run => Alternating between F5 (116) and Escape (27)
 * Blank => A simple dot (190)
 
-## Getting Started
+## Direct usage
 
-Download the [production version][min] or the [development version][max].
-
-[min]: https://raw.github.com/defaude/jquery-jquery-r800-keys/master/dist/jquery.jquery-r800-keys.min.js
-[max]: https://raw.github.com/defaude/jquery-jquery-r800-keys/master/dist/jquery.jquery-r800-keys.js
-
-Call the plugin on any jQuery-wrapped DOM node (`document` should do the trick for most use cases, though.) and pass an object containing the callbacks:
+Simply import the `presenterKeys` function module and call it with the callback functions you want to attach to the
+different keys:
 
 ```html
-<script src="jquery.js"></script>
-<script src="dist/jquery-r800-keys.min.js"></script>
-<script>
-jQuery(function($) {
-	$(document).r800Keys({
-		prev: function () { alert('prev'); },
-		next: function () { alert('next'); },
-		run: function () { alert('run'); },
-		blank: function () { alert('blank'); }
-	});
-});
+
+<script type="module">
+    import { presenterKeys } from "https://unpkg.com/@defaude/presenter-keys";
+
+    presenterKeys({
+        prev: () => console.log('prev'),
+        next: () => console.log('next'),
+        run: () => console.log('run'),
+        blank: () => console.log('blank')
+    });
 </script>
 ```
 
-Note: You don't have to pass all four callbacks. If you're just interested in the `prev` and `next` keys, for example, you could pass an object only containing those two.
+Based on the available keys, the four available callbacks are `prev`, `next`, `run` and `blank`. You don't need to pass
+all four callbacks - maybe you just need `prev` and `next` in most cases.
 
-## Release History
-2014-02-23 1.0.3 Switched to Grunt-based build :)
+## Installation as npm package
+
+This is published as npm package, so you can just
+
+```shell
+npm install @defaude/presenter-keys
+```
+
+and use it in your code
+
+```js
+import { presenterKeys } from '@defaude/presenter-keys';
+
+presenterKeys({ /* ... */ });
+```
