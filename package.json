@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "Presenter keys made easy",
   "license": "WTFPL",
-  "repository": "defaude/jquery-r800-keys",
+  "repository": "defaude/presenter-keys",
   "author": {
     "name": "Roland Hummel",
     "email": "git@defaude.info",
