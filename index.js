@@ -1,17 +1,12 @@
-const noop = () => undefined;
+function noop() {}
 
-export function presenterKeys(callbacks, element = document.body) {
-    const settings = {
-        prev: noop, next: noop, run: noop, blank: noop,
-        ...callbacks
-    };
-
+export function presenterKeys({prev = noop, next = noop, run = noop, blank = noop}, element = document.body) {
     const keyHandlers = {
-        PageUp: settings.prev,
-        PageDown: settings.next,
-        F5: settings.run,
-        Escape: settings.run,
-        '.': settings.blank
+        PageUp: prev,
+        PageDown: next,
+        F5: run,
+        Escape: run,
+        '.': blank
     };
 
     element.addEventListener('keydown', event => {
