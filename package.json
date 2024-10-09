@@ -11,5 +11,8 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "scripts": {
+    "test-page": "npx http-server test -o"
   }
 }
