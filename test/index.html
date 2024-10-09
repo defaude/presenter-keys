@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>testing @defaude/presenter-keys</title>
+    </head>
+    <body>
+        <h1>Hi there 👋</h1>
+
+        <p>You can try out the keys PageUp, PageDown, F5, Escape and . (period).</p>
+
+        <pre id="output"></pre>
+
+        <script type="module">
+            import { presenterKeys } from "https://unpkg.com/@defaude/presenter-keys";
+
+            const output = document.getElementById('output');
+
+            function print(command) {
+                output.append(`\n${command}`);
+            }
+
+            presenterKeys({
+                prev: () => print('prev'),
+                next: () => print('next'),
+                run: () => print('run'),
+                blank: () => print('blank')
+            });
+        </script>
+    </body>
+</html>
